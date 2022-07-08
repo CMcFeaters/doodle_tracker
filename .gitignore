@@ -110,6 +110,7 @@ ENV/
 env.bak/
 venv.bak/
 
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -123,11 +124,13 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-photos/
 .dmypy.json
 dmypy.json
 
 # Pyre type checker
 .pyre/
 
+# misc
 info.txt
+Scripts/
+photos/
