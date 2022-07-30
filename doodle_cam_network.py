@@ -10,6 +10,10 @@ import numpy as np
 camera=PiCamera()
 rawdata=PiRGBArray(camera)	#RGB array object
 
+'''
+This program just takes a picture and writes to a location. OBE
+'''
+
 #camera.start_preview()
 for i in range(2):
 	sleep(5)

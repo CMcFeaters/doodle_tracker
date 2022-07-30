@@ -1,6 +1,5 @@
-#!/home/pi/env/bin/python3
 '''
-This program runs on the NAS.  It is activated by the client php when a user opens the page.
+This program is the client runs on the NAS.  It is activated by the client php when a user opens the page.
 This program:
 -Send a request to the PIcam to take a pic
 -Receives that data from picam
@@ -35,12 +34,11 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 	#once we connect, recieve the response
 	#receive until connection is closed
 	data=0
-	data=s.recv(1024)	#our buffer is 1024 bits
+	data=s.recv(1024)	#our buffer is 1024 bytes
 	i=0
 	while 1:
 		print('Receiving %d'%i)
 		tdata=s.recv(1024)
-		#print(tdata)
 		if not tdata: break
 		data+=tdata
 		i+=1
@@ -55,6 +53,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 	print("File %s written"%st1)
 	
 	#print the name of the file
-	s.close()
 	print(fname)
-		
+	s.close()		

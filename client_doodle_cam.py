@@ -1,3 +1,8 @@
+'''
+This program takes a picture, opens a socket to the server, converts the picture to an RGB array
+and sends that data to a socket.  It waits a period of time before repeating.
+'''
+
 from picamera.array import PiRGBArray
 from picamera import PiCamera
 from time import sleep

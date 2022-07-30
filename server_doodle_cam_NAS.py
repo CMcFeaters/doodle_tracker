@@ -1,3 +1,9 @@
+'''
+server program for doodle cam.  This program listens on a socket, a client will
+open a connection and begin sending a rgb array of the picture.
+the server will receive this data and write to a file.
+'''
+
 from time import sleep
 from datetime import datetime as dt
 import cv2
@@ -7,6 +13,7 @@ import os
 
 HOST = "192.168.1.9"	#Pi address
 PORT=65432	#non-privileged port
+
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:	#AF_INET = AddressFamily Internet (IPV4), SOCK_STREAM = TCP
 	s.bind((HOST,PORT))
